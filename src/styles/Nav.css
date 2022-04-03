@@ -1,0 +1,29 @@
+nav{
+    height: 80px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: .5px solid #00FF00;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.nav-link{
+    color: white;
+    padding: 1rem;
+    margin: 0 .7rem;
+    text-decoration: none;
+    
+
+}
+.nav-link:hover{
+    color:  #00FF00;
+    transition: 300ms ease-in;
+}

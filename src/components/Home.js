@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import useReviews from "../custom-hooks/useReviews";
 import "../styles/Home.css";
 import Review from "./Review";
@@ -36,10 +37,13 @@ const Home = () => {
       </div>
 
       <div className="review-section">
-        <h2 className="review-title" >Customer Reviews</h2>
+        <h2 className="review-title" >CUSTOMER REVIEWS</h2>
 
         <div className="home-reviews">
             {reviews.slice(0,3).map(review => <Review review={review} />)}
+        </div>
+        <div className="see-more-section">
+        <button className='buy-btn see-more-reviews-btn'> <Link className='see-more-reviews-link' to='/reviews' >See All Reviews</Link> </button>
         </div>
       </div>
 

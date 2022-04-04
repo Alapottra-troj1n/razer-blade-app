@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import useReviews from "../custom-hooks/useReviews";
 import "../styles/Home.css";
+import Review from "./Review";
 
 const Home = () => {
+  //USED CUSTOM HOOK 
+  const [reviews, setReviews] = useReviews();
+  console.log(reviews);
+
+
   return (
     <div className="container">
 
@@ -13,7 +20,7 @@ const Home = () => {
             <h3 className="tagline">POWER. PERFORMANCE. PERFECTION.</h3>
             <p className='hero-details'>
               Just when you thought a gaming laptop couldn’t be any more
-              beastly—introducing the new Razer Blade 15, now available with the
+              beastly introducing the new Razer Blade 15, now available with the
               latest 12th Gen Intel® Core™ processor (14-core) and NVIDIA®
               GeForce RTX™ 30 Series Laptop GPUs for the most powerful gaming
               laptop graphics ever.
@@ -26,6 +33,14 @@ const Home = () => {
             <img src="https://i.ibb.co/CsRTfMB/https-hybrismediaprod-blob-core-windows-net-sys-master-phoenix-images-container-h00-hd7-928640466947.png" alt="" />
           </div>
 
+      </div>
+
+      <div className="review-section">
+        <h2 className="review-title" >Customer Reviews</h2>
+
+        <div className="home-reviews">
+            {reviews.slice(0,3).map(review => <Review review={review} />)}
+        </div>
       </div>
 
       

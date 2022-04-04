@@ -1,5 +1,5 @@
 .hero-section{
-    height: 80vh;
+    min-height: 80vh;
     display: grid;
     grid-template-columns: 3fr 5fr;
     justify-content: center;
@@ -44,4 +44,20 @@
 .buy-btn:hover{
     background-color: rgb(35, 35, 35);
     color: #44D62C;
+}
+
+.review-title{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.home-reviews{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5rem 0;
+    gap: 2rem;
+  
+    
 }

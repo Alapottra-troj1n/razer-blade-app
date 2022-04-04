@@ -5,6 +5,7 @@ import {
   CartesianGrid,
   Line,
   LineChart,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -20,11 +21,11 @@ const Dashboard = () => {
   return (
     <div>
       <h2 className="dashboard-title">DASHBOARD</h2>
-
       <div className="container">
         <div className="chartbox">
           <div className="chart-1">
             <h2 className="chart1-title colored">Investment</h2>
+            <ResponsiveContainer width="90%" height="90%">
             <LineChart width={500} height={300} data={chartData}>
               <Line type="monotone" dataKey="investment" stroke="#44D62C" />
               <CartesianGrid stroke="#f7e7e6" />
@@ -32,11 +33,12 @@ const Dashboard = () => {
               <YAxis stroke="#f7e7e6" width={100} />
               <Tooltip dataKey="investment"></Tooltip>
             </LineChart>
+            </ResponsiveContainer>
           </div>
 
           <div className="chart-2">
             <h2 className='colored'>Total Sales</h2>
-            
+            <ResponsiveContainer width="90%" height="90%">
               <AreaChart
                 width={500}
                 height={300}
@@ -54,6 +56,7 @@ const Dashboard = () => {
                   fill="#b8f7ad"
                 />
               </AreaChart>
+              </ResponsiveContainer>
       
           </div>
         </div>

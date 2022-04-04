@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import '../styles/Nav.css'
 
 const Nav = () => {
     return (
         <nav>
             <ul className="nav-links">
-                    <li><Link className="nav-link" to='/'>HOME</Link> </li>
-                    <li><Link className="nav-link" to='/reviews'>REVIEWS</Link> </li>
-                    <li><Link className="nav-link" to='/dashboard'>DASHBOARD</Link> </li>
-                    <li><Link className="nav-link" to='/blogs'>BLOGS</Link> </li>
-                    <li><Link className="nav-link" to='/about'>ABOUT</Link> </li>
+                    <li><NavLink activeClassName="active" className="nav-link" to='/'>HOME</NavLink> </li>
+                    <li><NavLink activeClassName="active" className="nav-link" to='/reviews'>REVIEWS</NavLink> </li>
+                    <li><NavLink activeClassName="active" className="nav-link" to='/dashboard'>DASHBOARD</NavLink> </li>
+                    <li><NavLink activeClassName="active" className="nav-link" to='/blogs'>BLOGS</NavLink> </li>
+                    <li><NavLink activeClassName="active" className="nav-link" to='/about'>ABOUT</NavLink> </li>
             </ul>
         </nav>
     );

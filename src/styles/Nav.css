@@ -1,9 +1,5 @@
 nav{
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: .5px solid #00FF00;
+    padding: 2rem 0;
 }
 
 .nav-links{
@@ -15,6 +11,7 @@ nav{
     font-weight: 500;
 }
 .nav-link{
+    border-bottom: 2px solid #007100;
     color: white;
     padding: 1rem;
     margin: 0 .7rem;
@@ -26,3 +23,27 @@ nav{
     color:  #00FF00;
     transition: 300ms ease-in;
 }
+.active{
+    border-bottom: 2px solid #00FF00;
+    color:#00FF00;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+    .nav-link{
+        border-bottom: none;
+        
+    
+    }
+    .nav-links li{
+        margin: 1rem 0;
+    }
+  
+  
+  }
+

@@ -14,7 +14,7 @@ const Reviews = () => {
             <p className='review-page-tagline'>Here’s what some of our customers say about our work.</p>
 
             <div className="main-reviews-container">
-                    {reviews.map((review) => <Review review={review} />)}
+                    {reviews.map((review) => <Review review={review} key={review.id} />)}
 
             </div>
         </div>

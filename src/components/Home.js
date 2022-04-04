@@ -40,7 +40,7 @@ const Home = () => {
         <h2 className="review-title" >CUSTOMER REVIEWS</h2>
 
         <div className="home-reviews">
-            {reviews.slice(0,3).map(review => <Review review={review} />)}
+            {reviews.slice(0,3).map(review => <Review review={review} key={review.id} />)}
         </div>
         <div className="see-more-section">
         <button className='buy-btn see-more-reviews-btn'> <Link className='see-more-reviews-link' to='/reviews' >See All Reviews</Link> </button>
